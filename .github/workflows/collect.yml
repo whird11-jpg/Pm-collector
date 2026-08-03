@@ -26,7 +26,7 @@ jobs:
       - run: pip install requests
 
       - name: Snapshot open markets
-        run: python collect.py --duration 4.5 --every 60
+        run: python collect.py --duration 300 --every 60
 
       - name: Resolve closed markets
         if: github.event.schedule == '17 3 * * *' || github.event_name == 'workflow_dispatch'
