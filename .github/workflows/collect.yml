@@ -29,7 +29,7 @@ jobs:
         run: python collect.py --duration 300 --every 60
 
       - name: Resolve closed markets
-        if: github.event.schedule == '17 3 * * *' || github.event_name == 'workflow_dispatch'
+      
         run: python resolve.py
 
       - name: Commit data
